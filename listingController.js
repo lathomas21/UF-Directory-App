@@ -29,21 +29,26 @@ angular.module('listings').controller('ListingsController', ['$scope', '$sce', '
 
       $scope.detailedInfo.code = $scope.listings[index].code;
       $scope.detailedInfo.building = $scope.listings[index].name;
-      
-      if($scope.listings[index].coordinates.latitude != undefined) { 
-        $scope.detailedInfo.latitude = $scope.listings[index].coordinates.latitude;
-      }
-      else {$scope.detailedInfo.latitude = "Unavailable";}
+      console.log($scope.listings[index].address)
 
-      if($scope.listings[index].coordinates.longitude != undefined) { 
+      
+      if($scope.listings[index].coordinates != undefined) { 
+        $scope.detailedInfo.latitude = $scope.listings[index].coordinates.latitude;
         $scope.detailedInfo.longitude = $scope.listings[index].coordinates.longitude;
       }
-      else {$scope.detailedInfo.longitude = "Unavailable";}
+      else {
+        $scope.detailedInfo.latitude = "Unavailable";
+        $scope.detailedInfo.longitude = "Unavailable";
+
+      }
+
 
       if($scope.listings[index].address != undefined) {
         $scope.detailedInfo.address = $scope.listings[index].address;
       }
-      else {$scope.detailedInfo.address = "Unavailable";}
+      else {
+        console.log("made it");
+      $scope.detailedInfo.address = "Unavailable";}
 
       };
     }
