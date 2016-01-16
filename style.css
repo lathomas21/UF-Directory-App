@@ -9,6 +9,11 @@
   float: left;
 }
 
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: rgb(237, 243, 249);
+ }
+
 #logo {
 	background: #f37021;
 	display: inline-block;
@@ -18,8 +23,8 @@
 }
 
 .boxy {
-	background-color: #eee;
-	border: 2px solid #eee;
+	background-color: rgb(237, 243, 249);
+	border: 2px solid rgb(237, 243, 249);
 	padding: 15px;
 	border-radius: 5px;
 	margin-bottom: 15px;
@@ -28,6 +33,7 @@
 .input-group {
 	padding-left: 15px;
 }
+
 
 header h1 {
 	display: inline-block;
