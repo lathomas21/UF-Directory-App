@@ -3,8 +3,8 @@ angular.module('listings').controller('ListingsController', ['$scope', '$sce', '
 
     $scope.listings = Listings;
     $scope.detailedInfo = undefined;
-    $scope.search_results = {};
 
+  //  $scope.search_input = "";
 
 
     $scope.addListing = function(code, name, latitude, longitude, address) {
@@ -29,7 +29,6 @@ angular.module('listings').controller('ListingsController', ['$scope', '$sce', '
 
       $scope.detailedInfo.code = $scope.listings[index].code;
       $scope.detailedInfo.building = $scope.listings[index].name;
-      console.log($scope.listings[index].address)
 
       
       if($scope.listings[index].coordinates != undefined) { 
@@ -46,10 +45,8 @@ angular.module('listings').controller('ListingsController', ['$scope', '$sce', '
       if($scope.listings[index].address != undefined) {
         $scope.detailedInfo.address = $scope.listings[index].address;
       }
-      else {
-        console.log("made it");
-      $scope.detailedInfo.address = "Unavailable";}
+      else { $scope.detailedInfo.address = "Unavailable";}
 
-      };
-    }
-    ]);
+    };
+  }
+  ]);

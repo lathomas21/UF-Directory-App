@@ -3,7 +3,8 @@
 }
 
 .tableWrapper {
-  max-height: 400px;
+
+  max-height: 550px;
   overflow: auto;
   float: left;
 }
@@ -24,12 +25,22 @@
 	margin-bottom: 15px;
 }
 
+.input-group {
+	padding-left: 15px;
+}
+
 header h1 {
 	display: inline-block;
 	color: #fff;
 	padding-left: 15px;
 	vertical-align: middle;
 }
+
+thead {
+	font-size: 30px;
+	font-weight: 500;
+}
+
 
 header {
 	background-color: #00529b;
