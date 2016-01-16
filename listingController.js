@@ -25,31 +25,26 @@ angular.module('listings').controller('ListingsController', ['$scope', '$sce', '
       $scope.listings.splice(index,1);
     };
     $scope.showDetails = function(index) {
-      $scope.detailedInfo = "";
-      $sce.trustAsHtml($scope.detailedInfo);
+      $scope.detailedInfo = {};
 
-      $scope.detailedInfo += "Code: "
-      $scope.detailedInfo += $scope.listings[index].code + " ";
-      $scope.detailedInfo += "Building Name: "
-      $scope.detailedInfo += $scope.listings[index].name + " ";
-
-      if($scope.listings[index].coordinates.latitude != undefined) {
-      $scope.detailedInfo += "Latitude: "
-      $scope.detailedInfo += $scope.listings[index].coordinates.latitude + " ";
-
-      }
+      $scope.detailedInfo.code = $scope.listings[index].code;
+      $scope.detailedInfo.building = $scope.listings[index].name;
       
-      if($scope.listings[index].coordinates.longitude != undefined){
-      $scope.detailedInfo += "Longitude: "
-      $scope.detailedInfo += $scope.listings[index].coordinates.longitude + " ";
+      if($scope.listings[index].coordinates.latitude != undefined) { 
+        $scope.detailedInfo.latitude = $scope.listings[index].coordinates.latitude;
       }
+      else {$scope.detailedInfo.latitude = "Unavailable";}
 
+      if($scope.listings[index].coordinates.longitude != undefined) { 
+        $scope.detailedInfo.longitude = $scope.listings[index].coordinates.longitude;
+      }
+      else {$scope.detailedInfo.longitude = "Unavailable";}
 
       if($scope.listings[index].address != undefined) {
-      $scope.detailedInfo += "Address: "
-      $scope.detailedInfo += $scope.listings[index].address;
+        $scope.detailedInfo.address = $scope.listings[index].address;
       }
+      else {$scope.detailedInfo.address = "Unavailable";}
 
-    };
-  }
-]);
+      };
+    }
+    ]);

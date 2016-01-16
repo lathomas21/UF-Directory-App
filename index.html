@@ -42,11 +42,15 @@
         </div>
       </div>
       <div class="col-md-6">
-        <div class="jumbotron">
+        <div class="boxy">
           <h2>Detailed Information</h2>
-          {{detailedInfo}}
+          <p>Code: {{detailedInfo.code}} </p>
+          <p>Building Name: {{detailedInfo.building}}</p>
+          <p>Latitude: {{detailedInfo.latitude}} </p>
+          <p>Longitude: {{detailedInfo.longitude}} </p>
+          <p>Address: {{detailedInfo.addres}} </p>
         </div>
-        <div id="add_listing">
+        <div class="boxy">
           <h2> Add a new listing </h2>
           <input type="text" class-"form-control" placeholder="Code" ng-model="new_code">
           <input type="text" class-"form-control" placeholder="Building Name" ng-model="new_building">
