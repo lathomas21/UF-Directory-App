@@ -1,0 +1,36 @@
+#searchBar {
+  margin: 15px 10px;
+}
+
+.tableWrapper {
+  max-height: 400px;
+  overflow: auto;
+  float: left;
+}
+
+#logo {
+	background: #f37021;
+	display: inline-block;
+	padding: 15px;
+	padding-left:20px;
+	border-right: 5px solid #fff;
+}
+
+#add_listing {
+	background-color: #eee;
+	border: 2px solid #eee;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+header h1 {
+	display: inline-block;
+	color: #fff;
+	padding-left: 15px;
+	vertical-align: middle;
+}
+
+header {
+	background-color: #00529b;
+	margin-bottom: 25px;
+}
